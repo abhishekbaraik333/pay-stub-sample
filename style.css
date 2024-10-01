@@ -1,0 +1,159 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;align-items: center;
+  height: 100vh;
+}
+
+.pay-stub {
+  width: 80%;
+  height: 90%;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.content {
+  border-left: 1px solid #323232;
+  border-right: 1px solid #323232;
+  border-bottom: 1px solid #323232;
+  border-top: 0;
+}
+
+/* Header Section */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #d6d6d6;
+}
+
+.header-section h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Grid layout for Employee Information and Earnings */
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.left {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5,1fr);
+  border-right: 1px solid #323232;
+}
+
+.right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5,1fr);
+
+}
+
+.earnings-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.details-heading {
+  padding: 10px;
+  text-align: left;
+  background-color: #d6d6d6;
+  font-weight: bold;
+  border-top: 1px solid #323232;
+  border-bottom: 1px solid #323232;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.earnings-grid .details-row {
+  border: 0px solid #323232;
+}
+
+.details-row {
+  padding: 10px;
+  border-right: 1px solid #323232;
+  text-align: left;
+  background-color: #fff;
+  display: flex;
+  align-items: start;
+}
+
+.last-row{
+    border: 0;
+}
+
+@media (max-width: 768px) {
+  .pay-stub {
+    width: 100%;
+  }
+
+  /* Adjust grid columns for smaller screens */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container{
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .container div{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+  }
+
+  .details-heading,
+  .details-row {
+    padding: 8px;
+    font-size: 12px;
+  }
+  .earnings-grid{
+   grid-template-columns: repeat(1,1fr);
+  }
+  .left{
+    width: 100%;
+    border: 0;
+  }
+  .right{
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+ 
+
+  .details-heading,
+  .details-row {
+    padding: 6px;
+    font-size: 10px;
+  }
+
+  .pay-stub{
+    width: 100%;
+  }
+  .pay-stub-title{
+    text-align: end;
+    font-size: 16px;
+  }
+}
